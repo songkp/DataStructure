@@ -114,41 +114,35 @@ template <typename T, typename VST> //元素类型、操作器
 void travPre_I2(MyBinNodePosi(T) x, VST& visit)//二叉树先序遍历算法（迭代版#2）
 {
 	Stack<MyBinNodePosi(T)> S;
-	int i = 0;
+	
 	while (x!=nullptr)
-	{
-		i++;
-		printf("\n*****%d********\n",i);
+	{		
 		visitAlongLeftBranch(x, visit, S);
 		if (S.empty())
 			break;
 		x = S.pop();	//弹出下一批的起点
-		if (i>100)
-		{
-			return;
-		}
 	}
 }
 
 template <typename T> template <typename VST> //元素类型、操作器
 void MyBinNode<T>::travPre(VST& visit) 
 { //二叉树先序遍历算法统一入口
-	printf("MyBinNode<T>::travPre(VST& visit)\n");
+	
 	int i = rand() % 3;
 	switch (i)
-	{ //此处暂随机选择以做测试，共三种选择
-		printf("\n  ==== 00000000***%d**\n",i);
+	{ 
+		//此处暂随机选择以做测试，共三种选择		
 	case 1:
-		printf("\n  ==== travPre_I1 *\n"); 
+		printf("\n  ==== travPre_I1  ====\n"); 
 		travPre_I1(this, visit);		
 		break; //迭代版#1
 	case 2: 
-		printf("\n  ==== travPre_I2 *\n"); 
+		printf("\n  ==== travPre_I2  ====\n"); 
 		travPre_I2(this, visit);
 		
 		break; //迭代版#2
 	default:
-		printf("\n  ==== travPre_R *\n");
+		printf("\n  ==== travPre_R  ====\n");
 		travPre_R(this, visit);
 		
 		break; //递归版

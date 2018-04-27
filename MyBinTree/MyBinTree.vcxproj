@@ -69,6 +69,7 @@
     <ClInclude Include="MyBinNode_implementation.h" />
     <ClInclude Include="MyBinTree.h" />
     <ClInclude Include="MyBinTree_implemention.h" />
+    <ClInclude Include="MyBitmap.h" />
     <ClInclude Include="print_MybinNode.h" />
   </ItemGroup>
   <ItemGroup>

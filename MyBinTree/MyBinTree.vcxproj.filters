@@ -33,6 +33,9 @@
     <ClInclude Include="print_MybinNode.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="MyBitmap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
